@@ -1,6 +1,6 @@
 javascript:(function(){
   payload=document.createElement('SCRIPT');
   payload.type='text/javascript';
-  payload.src='https://raw.githubusercontent.com/liamgm/DeleteKalturaVideoQuizReports/main/DeleteKalturaVideoQuizReports.js';
+  payload.src='https://cdn.citl.illinois.edu/jolt/bookmarklets/DeleteKalturaVideoQuizReports.js';
   document.getElementsByTagName('head')[0].appendChild(payload);
 })();
