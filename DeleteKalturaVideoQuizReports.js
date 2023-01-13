@@ -2,6 +2,9 @@ javascript:(
 function(){
 
 function logResponse() {
+    content = JSON.parse(this.responseText).content[0];
+    row = document.querySelector(content.target);
+    row.innerHTML = content.content;
     console.log(this.responseText);
 }
 
@@ -13,8 +16,10 @@ function extendPage() {
     } else { deleteStudents()}
 }
 
+function reloadPage() {location.reload()}
+
 function deleteStudent(urls) {
-    url = urls.pop();
+    url = urls.shift();
     console.log(String(urls.length) + ' remaining to delete...');
     let req = new XMLHttpRequest();
     req.addEventListener("load",logResponse);
@@ -22,7 +27,7 @@ function deleteStudent(urls) {
     req.send();
     if (urls.length > 0) {
        setTimeout(deleteStudent, 375, urls);
-    } else {location.reload()}
+    } else {setTimeout(reloadPage,375)}
 }
 
 function deleteStudents() {
