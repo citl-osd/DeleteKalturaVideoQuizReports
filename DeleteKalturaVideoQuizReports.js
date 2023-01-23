@@ -26,8 +26,8 @@ function deleteStudent(urls) {
     req.open('GET',url);
     req.send();
     if (urls.length > 0) {
-       setTimeout(deleteStudent, 375, urls);
-    } else {setTimeout(reloadPage,375)}
+       setTimeout(deleteStudent, 200, urls);
+    } else {setTimeout(reloadPage,1000)}
 }
 
 function deleteStudents() {
