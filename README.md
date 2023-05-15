@@ -2,7 +2,7 @@
 A tool for more quickly cleaning out old kaltura video quiz user data
 
 ## Purpose
-Here are the two reasons why you might want to empty out old student grades in a Kaltura Video quiz that led me to make this tool
+Reasons why you might want to empty out old student grades in a Kaltura Video quiz that led me to make this tool:
 * Once the number of student data rows for a video quiz gets beyond 400 or so, Kaltura can't reliably generate csv reports anymore
 * We've found that Kaltura does not reliably (~3% failure rate) set a grade using the LTI outcomes API, so we need those CSV's to quickly correct scores.
 * If a student re-takes a course, Kaltura will have their previous attempts recorded: they won't be able to take the number of attempts they are entitled to since their attempts from the last time the video quiz was in a course they were in are still recorded
